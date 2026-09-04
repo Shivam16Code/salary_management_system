@@ -52,6 +52,28 @@
     background-color: var(--color-brand-100);
     color: #1e3a8a;
   }
+
+  /* Clickable controls show a pointer cursor on hover */
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  summary,
+  label[for],
+  select:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [type="button"]:disabled,
+  [type="submit"]:disabled,
+  [type="reset"]:disabled,
+  select:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
 }
 
 @layer components {
@@ -147,35 +169,35 @@
   /* ——— Buttons (each variant is self-contained for Tailwind v4) ——— */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium px-4 py-2.5
-      transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none
+      cursor-pointer transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40
       bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:bg-brand-700;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium px-4 py-2.5
-      transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none
+      cursor-pointer transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40
       bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 active:bg-slate-100;
   }
 
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium px-4 py-2.5
-      transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none
+      cursor-pointer transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40
       text-slate-600 hover:bg-slate-100 active:bg-slate-200;
   }
 
   .btn-danger {
     @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium px-4 py-2.5
-      transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none
+      cursor-pointer transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40
       bg-red-600 text-white shadow-sm hover:bg-red-700 active:bg-red-700;
   }
 
   .btn-icon {
     @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium
-      transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none
+      cursor-pointer transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40
       p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-700;
   }
