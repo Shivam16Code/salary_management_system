@@ -1,0 +1,9 @@
+export const inputClass = 'input';
+export const selectClass = 'select';
+export const labelClass = 'label';
+export const btnPrimary = 'btn-primary';
+export const btnSecondary = 'btn-secondary';
+export const btnGhost = 'btn-ghost';
+export const inputLockedClass = 'input-locked';
+export const alertErrorClass = 'alert-error';
+export const alertInfoClass = 'alert-info';
